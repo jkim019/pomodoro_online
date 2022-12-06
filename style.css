@@ -1,0 +1,128 @@
+body {
+  height: 100vh;
+  padding: 35px;
+  display: center;
+  background: #49ba6b;
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+h1 {
+  margin: 15px 0;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 200;
+}
+input {
+  transition: 0.5s ease-in-out;
+  margin: 10px 0;
+  font-size: 14px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.11);
+  border: none;
+  color:white;
+}
+.btn-group {
+  height: 30%;
+  margin: 55px 500px;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-around;
+}
+
+button {
+  margin: 5px auto;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  font-weight: 300px;
+  transition: 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+label {
+  font-size: 14px;
+}
+form {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 55px 500px;
+}
+
+form button {
+  background: white;
+  width: 100%;
+  margin: 5px 0;
+  color: #49ba6b;
+}
+
+.start {
+  background: white;
+  color: #49ba6b;
+}
+.break {
+  background: white;
+  color: #49ba6b;
+}
+
+.pause {
+  background: white;
+  color: #49ba6b;
+}
+
+.reset {
+  background: #33824b;
+  color: white;
+}
+
+.resume {
+  background: rgb(131, 10, 252);
+  color: white;
+}
+
+.clock {
+  padding: 3px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  font-size: 48px;
+
+  grid-area: clock;
+
+}
+.progress-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-ring__circle {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: #33824b;
+}
+
+.danger {
+  stroke: rgb(243, 17, 28);
+  animation: pulse 0.9s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: rotate(-90deg) scale(1);
+  }
+  50% {
+    transform: rotate(-90deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-90deg) scale(0.8);
+  }
+}
