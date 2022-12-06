@@ -14,18 +14,20 @@
     <hr>
 
     <div class="clock">
+
       <!-- Denotes the time of phase (resting/working) -->
       <div class="mins">0</div>
       <div>:</div>
       <div class="secs">00</div>
       <audio src="http://soundbible.com/mp3/service-bell_daniel_simion.mp3"></audio>
 
-      <!-- Use the svg tag from w2schools to create the circle graphic -->
+      <!-- CLOCK GRAPHIC -->
       <svg class="progress-ring" height="340" width="340">
         <circle class="progress-ring__circle" stroke-width="10" fill="transparent" r="100" cx="170" cy="170"/>
       </svg>
 
     </div>
+    <!-- Tasks to do from database -->
 
     <!-- Buttons -->
     <div class="btn-group">
@@ -38,9 +40,9 @@
     <!-- Settings -->
     <form action=".">
       <label for="focusTime">Working Time</label>
-      <input type="number" value="1" id="focusTime" />
+      <input type="number" value="1" id="focusTime" /> <br>
       <label for="breakTime">Break Time</label>
-      <input type="number" value="1" id="breakTime" />
+      <input type="number" value="1" id="breakTime" /> <br>
       <button type="submit">SAVE SETTINGS</button>
     </form>
 
