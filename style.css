@@ -134,6 +134,7 @@ form button {
   }
 }
 
+/*here and below is new stuff added by alyssa*/
 ::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
