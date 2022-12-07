@@ -1,4 +1,4 @@
-body {
+    body {
   height: 100vh;
   padding: 35px;
   display: flex;
@@ -43,7 +43,6 @@ button {
   font-weight: 300px;
   transition: 0.5s ease-in-out;
   border-radius: 20px;
-  cursor: pointer;
 }
 
 label {
@@ -135,7 +134,6 @@ form button {
   }
 }
 
-/*Added style by Alyssa, feel free to delete comment, just here to separate from old style*/
 ::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
@@ -143,6 +141,10 @@ form button {
 .save:hover, .signupbtn:hover, .loginbtn:hover {
   background: #33824b;
   color: white;
+}
+
+button {
+	cursor: pointer;
 }
 
 .login-container {
@@ -183,12 +185,13 @@ form button {
 .popup .popuptext::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 0%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: #555 transparent transparent transparent;
+  transform: rotate(180deg);
 }
 
 /* Toggle this class - hide and show the popup */
@@ -200,11 +203,79 @@ form button {
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
+  0% { opacity: 0 }
+  50% { opacity: 1 }
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.signup-form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.signup-form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #38844c;
+}
+
+/* Full-width input fields */
+.signup-form-container input[type=text], .signup-form-container input[type=password] {
+  width: 250px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #49ba6b;
+}
+
+/* When the inputs get focus, do something */
+.signup-form-container input[type=text]:focus, .signup-form-container input[type=password]:focus {
+  background-color: #38844c;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.signup-form-container .btn {
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.signup-form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.signup-form-container .btn:hover, .open-button:hover {
+  opacity: 1;
 }
