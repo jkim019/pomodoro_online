@@ -135,7 +135,7 @@ form button {
   }
 }
 
-//Added style by Alyssa, feel free to delete comment, just here to separate from old style
+/*Added style by Alyssa, feel free to delete comment, just here to separate from old style*/
 ::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
