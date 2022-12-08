@@ -40,7 +40,7 @@ http.createServer(async function (req, res)
             task = pdata['task']
 		}); 
 
-        //******************** SEARCHING THE COMPANY DITS***********************/
+        //******************** VERIFYING THE USERNAME AND RETURNING TASKS***********************/
         try 
         {
             await client.connect();
