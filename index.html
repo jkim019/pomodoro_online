@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Time to Pomodoro!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script> 
+    <script>
 
       //for dog API
       function loadDog() {
@@ -62,8 +62,8 @@
     <button type="button" class="cancel" style="color: white;">Close</button>
   	</form>
 	</div>
-    
-    
+
+
   	<div class="login-container">
     <form action="/action_page.php" method="post">
       <input type="text" placeholder="Username" name="username">
@@ -73,9 +73,9 @@
       <button type="button" class="signupbtn" name="signupbtn">Sign Up</button>
     </form>
   	</div>
-    
+
     <h1 style="margin-bottom: 100px">Time to PomoDOGGO!</h1>
-    
+
     <hr>
 
     <div class="clock">
@@ -119,7 +119,7 @@
   <div class = "dog_api" style="text-align: center; display: none">
     <img id= "dogpic" src="" alt="Dog Picture" style="margin: 0px 100px; height: 250px"></img>
     <br>
-    <div style="text-align: center;"> 
+    <div style="text-align: center;">
         <button class="newDog" onclick="newDog()" style="display: inline-block; ">Get new dog!</button>
   </div>
 
@@ -165,13 +165,16 @@
         setProgress(0);
         mindiv.textContent = 0;
         secdiv.textContent = "00";
+        // Return timer to pause
+        pauseBtn.textContent = "PAUSE";
+        pauseBtn.classList.remove("RESUME");
       });
 
       pauseBtn.addEventListener("click", () => {
         if (paused === undefined) {
           return;
         }
-        if (paused) {
+        if (paused) { // PRESSED IN RESUME STATE, SO RESUME
           paused = false;
           initial = setTimeout("decremenT()", 60);
           pauseBtn.textContent = "PAUSE";
@@ -256,21 +259,21 @@
             if (!$("input[name='username']").val()) {
     			alert("Write a valid username to log in.");
     		} //checks username
-            
+
             if (!$("input[name='psw']").val()) {
     			alert("Write a valid password to log in.");
     		} //checks password
         });
-        
+
         $(".save").click(function(){
         	var popup = document.getElementById("myPopup");
   			popup.classList.toggle("show");
         }); //notifies user of saved work/break time input save
-        
+
         $(".signupbtn").click(function(){
   			$("#signupform").toggle();
         }); //shows signup page
-        
+
         $(".cancel").click(function(){
   			$("#signupform").hide();
         }); //shows signup page
