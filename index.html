@@ -5,10 +5,49 @@
     <meta charset="utf-8">
     <title>Time to Pomodoro!</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script> 
+
+      //for dog API
+      function loadDog() {
+            request = new XMLHttpRequest();
+            request.open("GET", "https://random.dog/woof.json", true);
+            request.onreadystatechange = function () {
+                print(request);
+            }
+            request.send();
+        }
+        function print() {
+            if (request.readyState == 4) {
+                var response = request.responseText;
+                dogpicURL = JSON.parse(request.responseText).url;
+                document.getElementById('dogpic').src = dogpicURL;
+            }
+        }
+        function newDog() {
+            response = fetch("https://random.dog/woof.json")
+            .then(response => response.json())
+            .then(result => document.getElementById("dogpic").src = result.url);
+        }
+
+        function hide_dog() {
+          const hidden_elems = document.getElementsByClassName('dog_api');
+          for (let i = 0; i < hidden_elems.length; i++) {
+              hidden_elems[i].style.display = 'none';
+            }
+        }
+
+        function show_dog() {
+          const hidden_elems = document.getElementsByClassName('dog_api');
+            for (let i = 0; i < hidden_elems.length; i++) {
+              hidden_elems[i].style.display = 'block';
+            }
+        }
+
+    </script>
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
+  <body onload = "loadDog()">
   	<div class="signup-form-popup" id="signupform">
  	<form action="/action_page.php" class="signup-form-container">
     <h1>Sign Up</h1>
@@ -35,7 +74,7 @@
     </form>
   	</div>
     
-    <h1>Time to PomoDOGGO!</h1>
+    <h1 style="margin-bottom: 100px">Time to PomoDOGGO!</h1>
     
     <hr>
 
@@ -56,7 +95,7 @@
     <!-- Tasks to do from database -->
 
     <!-- Buttons -->
-    <div class="btn-group">
+    <div class="btn-group" style= "margin-top: 200px">
       <button class="start">WORK</button>
       <button class="pause">PAUSE</button>
       <button class="reset">RESET</button>
@@ -76,6 +115,13 @@
     <div class="popup">
   	<span class="popuptext" id="myPopup">Saved!</span>
 	</div>
+
+  <div class = "dog_api" style="text-align: center; display: none">
+    <img id= "dogpic" src="" alt="Dog Picture" style="margin: 0px 100px; height: 250px"></img>
+    <br>
+    <div style="text-align: center;"> 
+        <button class="newDog" onclick="newDog()" style="display: inline-block; ">Get new dog!</button>
+  </div>
 
 
     <footer>
@@ -191,10 +237,14 @@
             startBtn.textContent = "REST";
             startBtn.classList.add("break");
             localStorage.setItem("btn", "break");
+            alert('this is working?');
+            show_dog();
           } else {
             startBtn.classList.remove("break");
             startBtn.textContent = "WORK";
             localStorage.setItem("btn", "focus");
+            alert('this is working!');
+            hide_dog();
           }
           startBtn.style.transform = "scale(1)";
         }
