@@ -240,13 +240,11 @@
             startBtn.textContent = "REST";
             startBtn.classList.add("break");
             localStorage.setItem("btn", "break");
-            alert('this is working?');
             show_dog();
           } else {
             startBtn.classList.remove("break");
             startBtn.textContent = "WORK";
             localStorage.setItem("btn", "focus");
-            alert('this is working!');
             hide_dog();
           }
           startBtn.style.transform = "scale(1)";
