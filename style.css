@@ -127,10 +127,10 @@ form button {
     transform: rotate(-90deg) scale(1);
   }
   50% {
-    transform: rotate(-90deg) scale(1.05);
+    transform: rotate(-90deg) scale(1.01);
   }
   75% {
-    transform: rotate(-90deg) scale(0.8);
+    transform: rotate(-90deg) scale(0.99);
   }
 }
 
