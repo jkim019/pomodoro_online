@@ -1,7 +1,8 @@
 html {
-  overscroll-behavior: none;
+  overflow: hidden;
 }
 body {
+  overflow: auto;
   height: 100vh;
   padding: 35px;
   display: flex;
