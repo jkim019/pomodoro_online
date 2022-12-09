@@ -157,7 +157,7 @@ form button {
 
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .login-container {
@@ -303,4 +303,13 @@ button {
   width:100%;
   text-align:center;
 
+}
+
+.newDog {
+  color: #49ba6b;
+}
+
+.newDog:hover {
+  background-color: #8E562E;
+  color: white;	
 }
