@@ -65,8 +65,8 @@
 
   	<div class="login-container">
     <form action="http://localhost:8080/process" method="post">
-      <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">&nbsp;&nbsp;&nbsp;
+      <input type="text" placeholder="Username" name="username" required>
+      <input type="text" placeholder="Password" name="psw" required>&nbsp;&nbsp;&nbsp;
       <button type="submit" class="loginbtn" name="loginbtn">Login</button>
       <span style="margin: 10px;"> or </span>
       <button type="button" class="signupbtn" name="signupbtn">Sign Up</button>
@@ -253,16 +253,6 @@
     </script>
 	<script>
     $(document).ready(function(){
-  		$(".loginbtn").click(function(){
-            if (!$("input[name='username']").val()) {
-    			alert("Write a valid username to log in.");
-    		} //checks username
-
-            if (!$("input[name='psw']").val()) {
-    			alert("Write a valid password to log in.");
-    		} //checks password
-        });
-
         $(".save").click(function(){
         	var popup = document.getElementById("myPopup");
   			popup.classList.toggle("show");
