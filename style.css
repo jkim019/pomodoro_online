@@ -3,7 +3,7 @@ body {
   padding: 35px;
   display: flex;
   flex-direction: column;
-  background: url(wallpaper.png) no-repeat center center fixed;
+  background: url(https://github.com/jkim019/pomodoro_online/blob/main/wallpaper.png?raw=true) no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -170,7 +170,39 @@ button {
 
 }
 
-/* Popup container - can be anything you want */
+/*RESPONSIVENESS FOR LOGIN CONTAINER!!!!*/
+@media screen and (max-width: 795px) {
+  .login-container {
+  	width: 50%;
+  }
+  
+  .login-container input[type=text], .loginbtn, .signupbtn, .orr {
+    display: block;
+    float: none;
+    margin-left: auto;
+  	margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .login-container input[type=text], .loginbtn, .signupbtn {
+  	width: 50%;
+  }
+  
+  .loginbtn, .signupbtn {
+  	padding: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 300px) {
+  .loginbtn, .signupbtn {
+  	width: fit-content;
+  }
+}
+
+  
+/* Popup container */
 .popup {
   position: relative;
   display: inline-block;
