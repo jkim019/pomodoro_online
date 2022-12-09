@@ -1,10 +1,5 @@
-html {
-  overflow: hidden;
-  height: 100%;
-}
 body {
-  overflow: auto;
-  height: 100%;
+  height: 100vh;
   padding: 35px;
   display: flex;
   flex-direction: column;
