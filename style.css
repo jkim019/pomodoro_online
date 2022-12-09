@@ -3,7 +3,8 @@
   padding: 35px;
   display: flex;
   flex-direction: column;
-  background: #49ba6b;
+  background: url(wallpaper.png) no-repeat;
+   background-size: cover;
   color: white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
@@ -19,7 +20,7 @@ input {
   margin: 10px 0;
   font-size: 14px;
   padding: 5px;
-  background: rgba(0, 0, 0, 0.11);
+  background: rgba(0, 0, 0, 0.20);
   border: none;
   color:white;
 }
@@ -27,7 +28,7 @@ input {
 .btn-group {
   display: flex;
   flex-direction: column;
-  height: 30%;
+  height: 10%;
   margin: 55px 500px;
   align-self: center;
   justify-self: center;
@@ -139,10 +140,17 @@ form button {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.save:hover, .signupbtn:hover, .loginbtn:hover {
+/* ASHTON: Added effect too all buttons on the page */
+.save:hover, .signupbtn:hover, .loginbtn:hover , .btn:hover , .start:hover, .pause:hover{
   background: #33824b;
   color: white;
 }
+
+.reset:hover{
+  background: white;
+  color: #33824b;
+}
+
 
 button {
 	cursor: pointer;
@@ -150,9 +158,12 @@ button {
 
 .login-container {
 	background: rgba(0, 0, 0, 0.1);
-    width: 700px;
-    text-align: right;
-    margin:0px auto 0px auto;
+  width: 700px;
+  text-align: right;
+  margin:0px auto 0px auto;
+  border-radius: 10px;
+  padding: 10px;
+
 }
 
 /* Popup container - can be anything you want */
@@ -235,15 +246,16 @@ button {
   position: fixed;
   bottom: 0;
   right: 15px;
-  border: 3px solid #f1f1f1;
   z-index: 9;
 }
 
 /* Add styles to the form container */
 .signup-form-container {
+  border-radius: 10px;
   max-width: 300px;
   padding: 10px;
-  background-color: #38844c;
+  background-color: #399f55;
+  background: rgba(0, 0, 0, 0.10);
 }
 
 /* Full-width input fields */
@@ -252,13 +264,13 @@ button {
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #49ba6b;
+  background: rgba(0, 0, 0, 0.20);
 }
 
 /* When the inputs get focus, do something */
 .signup-form-container input[type=text]:focus, .signup-form-container input[type=password]:focus {
-  background-color: #38844c;
-  outline: none;
+  background: rgba(0, 0, 0, 0.35);
+  outline: rgba(0, 0, 0, 0.35);
 }
 
 /* Set a style for the submit/login button */
@@ -271,12 +283,20 @@ button {
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
+/* Add a DARK GREEN background color to the cancel button */
 .signup-form-container .cancel {
-  background-color: red;
+  background: #33824b;
+  color:white;
 }
 
-/* Add some hover effects to buttons */
-.signup-form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+.signup-form-container .cancel:hover {
+  background: white;
+  color: #33824b;
+}
+
+.settings {
+  display: incline-block;
+  width:100%;
+  text-align:center;
+
 }
