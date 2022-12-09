@@ -102,7 +102,7 @@
     </div>
 
     <!-- Settings -->
-    <form action=".">
+    <form action="." id='settings'>
       <label for="focusTime">Working Time</label>
       <input type="number" value="1" id="focusTime" /> <br>
       <label for="breakTime">Break Time</label>
@@ -152,10 +152,11 @@
       focusTimeInput.value = localStorage.getItem("focusTime");
       breakTimeInput.value = localStorage.getItem("breakTime");
 
-      document.querySelector("form").addEventListener("submit", (e) => {
+      document.getElementById('settings').addEventListener("submit", (e) => {
         e.preventDefault();
         localStorage.setItem("focusTime", focusTimeInput.value);
         localStorage.setItem("breakTime", breakTimeInput.value);
+        
       });
 
       document.querySelector(".reset").addEventListener("click", () => {
