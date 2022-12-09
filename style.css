@@ -157,7 +157,7 @@ button {
 }
 
 .login-container {
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.15);
   width: 700px;
   text-align: right;
   margin:0px auto 0px auto;
@@ -255,7 +255,7 @@ button {
   max-width: 300px;
   padding: 10px;
   background-color: #399f55;
-  background: rgba(0, 0, 0, 0.10);
+  background: rgba(0, 0, 0, 0.20);
 }
 
 /* Full-width input fields */

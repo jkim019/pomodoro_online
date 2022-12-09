@@ -64,18 +64,19 @@
 
 
   	<div class="login-container">
-    <form action="http://localhost:8080/process" method="post"> 
+    <form action="http://localhost:8080/process" method="post">
       <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">
+      <input type="text" placeholder="Password" name="psw">&nbsp;&nbsp;&nbsp;
       <button type="submit" class="loginbtn" name="loginbtn">Login</button>
       <span style="margin: 10px;"> or </span>
       <button type="button" class="signupbtn" name="signupbtn">Sign Up</button>
     </form>
   	</div>
+    <br>
 
-    <h1 style="margin-bottom: 100px">Time to PomoDOGGO!</h1>
+    <h1 >Time to </h1>
+    <h1 style="margin-bottom: 100px; font-size:48px;"><b>🐶 PomoDOGGO!</b></h1>
 
-    <hr>
 
     <div class="clock">
 
@@ -103,10 +104,10 @@
 
     <!-- Settings -->
     <form action=".">
-      <label for="focusTime">Working Time</label>
+      <label for="focusTime" style="display:block;">Working Time</label>
       <input type="number" value="1" id="focusTime" /> <br>
-      <label for="breakTime">Break Time</label>
-      <input type="number" value="1" id="breakTime" /> <br>
+      <label for="breakTime" style="display:block;">Break Time</label>
+      <input type="number" value="1" id="breakTime" /> <br> <br>
       <button type="submit" class="save">SAVE SETTINGS</button>
     </form>
     <br>
