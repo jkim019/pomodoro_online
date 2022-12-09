@@ -3,8 +3,12 @@
   padding: 35px;
   display: flex;
   flex-direction: column;
-  background: url(wallpaper.png) no-repeat;
-   background-size: cover;
+  background: url(wallpaper.png) no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
